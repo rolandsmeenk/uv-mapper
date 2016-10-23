@@ -2,6 +2,7 @@
 #include <QVectorIterator>
 #include <QStringListIterator>
 #include <QFuture>
+#include <QtConcurrent>
 
 PatternManager::PatternManager()
 {

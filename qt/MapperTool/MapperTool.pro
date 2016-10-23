@@ -6,7 +6,7 @@
 
 QT += \
     core gui \
-    opengl
+    opengl concurrent
 
 TARGET = MapperTool
 TEMPLATE = app
@@ -64,7 +64,7 @@ OTHER_FILES += \
     resources/testGrid_frag.glsl
 
 unix {
-    LIBS += -I/usr/include/opencv -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_photo
+    LIBS += -I/usr/include/opencv -lopencv_world
 }
 
 macx {
@@ -78,84 +78,66 @@ win32 {
     # Copy Qt runtime
 
     CONFIG(debug, debug|release) {
-        QtCored4.commands = copy /Y %QTDIR%\\bin\\QtCored4.dll debug
-        QtCored4.target = debug/QtCored4.dll
-        QtGuid4.commands = copy /Y %QTDIR%\\bin\\QtGuid4.dll debug
-        QtGuid4.target = debug/QtGuid4.dll
-        QtOpenGLd4.commands = copy /Y %QTDIR%\\bin\\QtOpenGLd4.dll debug
-        QtOpenGLd4.target = debug/QtOpenGLd4.dll
+        LIBS += -lopengl32
+        Qt5Cored.commands = copy /Y %QTDIR%\\bin\\Qt5Cored.dll debug
+        Qt5Cored.target = debug/Qt5Cored.dll
+        Qt5Guid.commands = copy /Y %QTDIR%\\bin\\Qt5Guid.dll debug
+        Qt5Guid.target = debug/Qt5Guid.dll
+        Qt5OpenGLd.commands = copy /Y %QTDIR%\\bin\\Qt5OpenGLd.dll debug
+        Qt5OpenGLd.target = debug/Qt5OpenGLd.dll
+        Qt5Concurrentd.commands = copy /Y %QTDIR%\\bin\\Qt5Concurrentd.dll debug
+        Qt5Concurrentd.target = debug/Qt5Concurrentd.dll
 
-        QMAKE_EXTRA_TARGETS += QtCored4 QtGuid4 QtOpenGLd4
-        PRE_TARGETDEPS += debug/QtCored4.dll debug/QtGuid4.dll debug/QtOpenGLd4.dll
+        QMAKE_EXTRA_TARGETS += Qt5Cored Qt5Guid Qt5OpenGLd Qt5Concurrentd
+        PRE_TARGETDEPS += debug/Qt5Cored.dll debug/Qt5Guid.dll debug/Qt5OpenGLd.dll debug/Qt5Concurrentd.dll
     } else {
-        QtCore4.commands = copy /Y %QTDIR%\\bin\\QtCore4.dll release
-        QtCore4.target = release/QtCore4.dll
-        QtGui4.commands = copy /Y %QTDIR%\\bin\\QtGui4.dll release
-        QtGui4.target = release/QtGui4.dll
-        QtOpenGL4.commands = copy /Y %QTDIR%\\bin\\QtOpenGL4.dll release
-        QtOpenGL4.target = release/QtOpenGL4.dll
+        LIBS += -lopengl32
+        Qt5Core.commands = copy /Y %QTDIR%\\bin\\Qt5Core.dll release
+        Qt5Core.target = release/Qt5Core.dll
+        Qt5Gui.commands = copy /Y %QTDIR%\\bin\\Qt5Gui.dll release
+        Qt5Gui.target = release/Qt5Gui.dll
+        Qt5OpenGL.commands = copy /Y %QTDIR%\\bin\\Qt5OpenGL.dll release
+        Qt5OpenGL.target = release/Qt5OpenGL.dll
+        Qt5Concurrent.commands = copy /Y %QTDIR%\\bin\\Qt5Concurrent.dll release
+        Qt5Concurrent.target = release/Qt5Concurrent.dll
 
-        QMAKE_EXTRA_TARGETS += QtCore4 QtGui4 QtOpenGL4
-        PRE_TARGETDEPS += release/QtCore4.dll release/QtGui4.dll release/QtOpenGL4.dll
+        QMAKE_EXTRA_TARGETS += Qt5Core Qt5Gui Qt5OpenGL Qt5Concurrent
+        PRE_TARGETDEPS += release/Qt5Core.dll release/Qt5Gui.dll release/Qt5OpenGL.dll release/Qt5Concurrent.dll\
     }
 
     # Include, link and copy opencv dependency
 
-    OPENCVDIR = "..\\..\\..\\opencv\\install"
+    OPENCVDIR = "C:\\Store\\Install\\OpenCV\\opencv\\build"
     OPENCVINCLUDEDIR = $${OPENCVDIR}\\include
-    OPENCVLIBDIR = $${OPENCVDIR}\\lib
-    OPENCVBINDIR = $${OPENCVDIR}\\bin
+    OPENCVLIBDIR = $${OPENCVDIR}\\x64\\vc14\\lib
+    OPENCVBINDIR = $${OPENCVDIR}\\x64\\vc14\\bin
     exists($$OPENCVDIR) {
           DEFINES += USEOPENCV
           INCLUDEPATH += $${OPENCVINCLUDEDIR}
           DEPENDPATH += $${OPENCVINCLUDEDIR}
           CONFIG(release, debug|release) {
                   LIBS += -L$${OPENCVLIBDIR} \
-                          -lopencv_core240 \
-                          -lopencv_highgui240 \
-                          -lopencv_imgproc240 \
-                          -lopencv_photo240
+                          -lopencv_world310
                   PRE_TARGETDEPS += \
-                          $${OPENCVLIBDIR}/opencv_core240.lib \
-                          $${OPENCVLIBDIR}/opencv_highgui240.lib \
-                          $${OPENCVLIBDIR}/opencv_imgproc240.lib \
-                          $${OPENCVLIBDIR}/opencv_photo240.lib
+                          $${OPENCVLIBDIR}/opencv_world310.lib
 
-                  opencv_core240.commands = copy /Y $${OPENCVBINDIR}\\opencv_core240.dll release
-                  opencv_core240.target = release/opencv_core240.dll
-                  opencv_highgui240.commands = copy /Y $${OPENCVBINDIR}\\opencv_highgui240.dll release
-                  opencv_highgui240.target = release/opencv_highgui240.dll
-                  opencv_imgproc240.commands = copy /Y $${OPENCVBINDIR}\\opencv_imgproc240.dll release
-                  opencv_imgproc240.target = release/opencv_imgproc240.dll
-                  opencv_photo240.commands = copy /Y $${OPENCVBINDIR}\\opencv_photo240.dll release
-                  opencv_photo240.target = release/opencv_photo240.dll
+                  opencv_world310.commands = copy /Y $${OPENCVBINDIR}\\opencv_world310.dll release
+                  opencv_world310.target = release/opencv_world310.dll
 
-                  QMAKE_EXTRA_TARGETS += opencv_core240 opencv_highgui240 opencv_imgproc240 opencv_photo240
-                  PRE_TARGETDEPS += release/opencv_core240.dll release/opencv_highgui240.dll release/opencv_imgproc240.dll release/opencv_photo240.dll
+                  QMAKE_EXTRA_TARGETS += opencv_world310
+                  PRE_TARGETDEPS += release/opencv_world310.dll
 
           } else {
                   LIBS += -L$${OPENCVLIBDIR} \
-                          -lopencv_core240d \
-                          -lopencv_highgui240d \
-                          -lopencv_imgproc240d \
-                          -lopencv_photo240d
+                          -lopencv_world310d
                   PRE_TARGETDEPS += \
-                          $${OPENCVLIBDIR}/opencv_core240d.lib \
-                          $${OPENCVLIBDIR}/opencv_highgui240d.lib \
-                          $${OPENCVLIBDIR}/opencv_imgproc240d.lib \
-                          $${OPENCVLIBDIR}/opencv_photo240d.lib
+                          $${OPENCVLIBDIR}/opencv_world310d.lib
 
-                  opencv_core240d.commands = copy /Y $${OPENCVBINDIR}\\opencv_core240d.dll debug
-                  opencv_core240d.target = debug/opencv_core240d.dll
-                  opencv_highgui240d.commands = copy /Y $${OPENCVBINDIR}\\opencv_highgui240d.dll debug
-                  opencv_highgui240d.target = debug/opencv_highgui240d.dll
-                  opencv_imgproc240d.commands = copy /Y $${OPENCVBINDIR}\\opencv_imgproc240d.dll debug
-                  opencv_imgproc240d.target = debug/opencv_imgproc240d.dll
-                  opencv_photo240d.commands = copy /Y $${OPENCVBINDIR}\\opencv_photo240d.dll debug
-                  opencv_photo240d.target = debug/opencv_photo240d.dll
+                  opencv_world310d.commands = copy /Y $${OPENCVBINDIR}\\opencv_world310d.dll debug
+                  opencv_world310d.target = debug/opencv_world310d.dll
 
-                  QMAKE_EXTRA_TARGETS += opencv_core240d opencv_highgui240d opencv_imgproc240d opencv_photo240d
-                  PRE_TARGETDEPS += debug/opencv_core240d.dll debug/opencv_highgui240d.dll debug/opencv_imgproc240d.dll debug/opencv_photo240d.dll
+                  QMAKE_EXTRA_TARGETS += opencv_world310d
+                  PRE_TARGETDEPS += debug/opencv_world310d.dll
 
           }
     } else {

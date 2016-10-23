@@ -10,18 +10,18 @@
 #ifndef UI_INVERSEDIALOG_H
 #define UI_INVERSEDIALOG_H
 
-#include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QSpinBox>
+#include <QVariant>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QHeaderView>
+#include <QLabel>
+#include <QLineEdit>
+#include <QSpinBox>
 
 QT_BEGIN_NAMESPACE
 
@@ -103,28 +103,28 @@ public:
 
     void retranslateUi(QDialog *InverseDialog)
     {
-        InverseDialog->setWindowTitle(QApplication::translate("InverseDialog", "Create inverse from current map", 0, QApplication::UnicodeUTF8));
+        InverseDialog->setWindowTitle(QApplication::translate("InverseDialog", "Create inverse from current map", 0));
         lineEditWidth->setInputMask(QString());
         lineEditHeight->setInputMask(QString());
-        labelPresets->setText(QApplication::translate("InverseDialog", "Preset:", 0, QApplication::UnicodeUTF8));
-        labelWidth->setText(QApplication::translate("InverseDialog", "Width:", 0, QApplication::UnicodeUTF8));
-        labelHeight->setText(QApplication::translate("InverseDialog", "Height:", 0, QApplication::UnicodeUTF8));
+        labelPresets->setText(QApplication::translate("InverseDialog", "Preset:", 0));
+        labelWidth->setText(QApplication::translate("InverseDialog", "Width:", 0));
+        labelHeight->setText(QApplication::translate("InverseDialog", "Height:", 0));
         comboPresets->clear();
         comboPresets->insertItems(0, QStringList()
-         << QApplication::translate("InverseDialog", "Current screen resolution", "auto", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "SGA (800 x 600)", "800x600", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "XGA (1024 x 768)", "1024x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "WXGA (1280 x 800)", "1280x800", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "720p (1280 x 720)", "1280x720", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "1080p (1920 x 1080)", "1920x1080", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "Dual XGA (2048 x 768)", "2048x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "Triple XGA (3072 x 768)", "3072x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "Dual WXGA (2560 x 800)", "2560x800", QApplication::UnicodeUTF8)
-         << QApplication::translate("InverseDialog", "Triple WXGA (3840 x 800)", "3840x800", QApplication::UnicodeUTF8)
+         << QApplication::translate("InverseDialog", "Current screen resolution", "auto")
+         << QApplication::translate("InverseDialog", "SGA (800 x 600)", "800x600")
+         << QApplication::translate("InverseDialog", "XGA (1024 x 768)", "1024x768")
+         << QApplication::translate("InverseDialog", "WXGA (1280 x 800)", "1280x800")
+         << QApplication::translate("InverseDialog", "720p (1280 x 720)", "1280x720")
+         << QApplication::translate("InverseDialog", "1080p (1920 x 1080)", "1920x1080")
+         << QApplication::translate("InverseDialog", "Dual XGA (2048 x 768)", "2048x768")
+         << QApplication::translate("InverseDialog", "Triple XGA (3072 x 768)", "3072x768")
+         << QApplication::translate("InverseDialog", "Dual WXGA (2560 x 800)", "2560x800")
+         << QApplication::translate("InverseDialog", "Triple WXGA (3840 x 800)", "3840x800")
         );
-        checkCentered->setText(QApplication::translate("InverseDialog", "Centered patterns", 0, QApplication::UnicodeUTF8));
-        spinBoxDepth->setSuffix(QApplication::translate("InverseDialog", " bits", 0, QApplication::UnicodeUTF8));
-        labelDepth->setText(QApplication::translate("InverseDialog", "Depth:", 0, QApplication::UnicodeUTF8));
+        checkCentered->setText(QApplication::translate("InverseDialog", "Centered patterns", 0));
+        spinBoxDepth->setSuffix(QApplication::translate("InverseDialog", " bits", 0));
+        labelDepth->setText(QApplication::translate("InverseDialog", "Depth:", 0));
     } // retranslateUi
 
 };

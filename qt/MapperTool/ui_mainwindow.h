@@ -10,17 +10,17 @@
 #ifndef UI_MAINWINDOW_H
 #define UI_MAINWINDOW_H
 
-#include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QWidget>
+#include <QVariant>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QHBoxLayout>
+#include <QHeaderView>
+#include <QMainWindow>
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -279,131 +279,131 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Mapper Tool", 0, QApplication::UnicodeUTF8));
-        actionAbout->setText(QApplication::translate("MainWindow", "About...", 0, QApplication::UnicodeUTF8));
-        actionFileOpen->setText(QApplication::translate("MainWindow", "Open...", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Mapper Tool", 0));
+        actionAbout->setText(QApplication::translate("MainWindow", "About...", 0));
+        actionFileOpen->setText(QApplication::translate("MainWindow", "Open...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionFileOpen->setToolTip(QApplication::translate("MainWindow", "Load a map from disk", 0, QApplication::UnicodeUTF8));
+        actionFileOpen->setToolTip(QApplication::translate("MainWindow", "Load a map from disk", 0));
 #endif // QT_NO_TOOLTIP
-        actionFileOpen->setShortcut(QApplication::translate("MainWindow", "Ctrl+O", 0, QApplication::UnicodeUTF8));
-        actionFileRevert->setText(QApplication::translate("MainWindow", "Reload", 0, QApplication::UnicodeUTF8));
+        actionFileOpen->setShortcut(QApplication::translate("MainWindow", "Ctrl+O", 0));
+        actionFileRevert->setText(QApplication::translate("MainWindow", "Reload", 0));
 #ifndef QT_NO_TOOLTIP
-        actionFileRevert->setToolTip(QApplication::translate("MainWindow", "Revert to the version saved to disk", 0, QApplication::UnicodeUTF8));
+        actionFileRevert->setToolTip(QApplication::translate("MainWindow", "Revert to the version saved to disk", 0));
 #endif // QT_NO_TOOLTIP
-        actionFileSave->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
+        actionFileSave->setText(QApplication::translate("MainWindow", "Save", 0));
 #ifndef QT_NO_TOOLTIP
-        actionFileSave->setToolTip(QApplication::translate("MainWindow", "Save current map to disk", 0, QApplication::UnicodeUTF8));
+        actionFileSave->setToolTip(QApplication::translate("MainWindow", "Save current map to disk", 0));
 #endif // QT_NO_TOOLTIP
-        actionFileSave->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0, QApplication::UnicodeUTF8));
-        actionFileSaveAs->setText(QApplication::translate("MainWindow", "Save as...", 0, QApplication::UnicodeUTF8));
+        actionFileSave->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0));
+        actionFileSaveAs->setText(QApplication::translate("MainWindow", "Save as...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionFileSaveAs->setToolTip(QApplication::translate("MainWindow", "Save current map under a different filename", 0, QApplication::UnicodeUTF8));
+        actionFileSaveAs->setToolTip(QApplication::translate("MainWindow", "Save current map under a different filename", 0));
 #endif // QT_NO_TOOLTIP
-        actionFileSaveAs->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+S", 0, QApplication::UnicodeUTF8));
-        actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
+        actionFileSaveAs->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+S", 0));
+        actionExit->setText(QApplication::translate("MainWindow", "Exit", 0));
 #ifndef QT_NO_TOOLTIP
-        actionExit->setToolTip(QApplication::translate("MainWindow", "Quit the application", 0, QApplication::UnicodeUTF8));
+        actionExit->setToolTip(QApplication::translate("MainWindow", "Quit the application", 0));
 #endif // QT_NO_TOOLTIP
-        actionEditUndo->setText(QApplication::translate("MainWindow", "Undo", 0, QApplication::UnicodeUTF8));
+        actionEditUndo->setText(QApplication::translate("MainWindow", "Undo", 0));
 #ifndef QT_NO_TOOLTIP
-        actionEditUndo->setToolTip(QApplication::translate("MainWindow", "Undo last action", 0, QApplication::UnicodeUTF8));
+        actionEditUndo->setToolTip(QApplication::translate("MainWindow", "Undo last action", 0));
 #endif // QT_NO_TOOLTIP
-        actionEditUndo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", 0, QApplication::UnicodeUTF8));
-        actionEditRedo->setText(QApplication::translate("MainWindow", "Redo", 0, QApplication::UnicodeUTF8));
+        actionEditUndo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", 0));
+        actionEditRedo->setText(QApplication::translate("MainWindow", "Redo", 0));
 #ifndef QT_NO_TOOLTIP
-        actionEditRedo->setToolTip(QApplication::translate("MainWindow", "Redo the last action", 0, QApplication::UnicodeUTF8));
+        actionEditRedo->setToolTip(QApplication::translate("MainWindow", "Redo the last action", 0));
 #endif // QT_NO_TOOLTIP
-        actionEditRedo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+Z", 0, QApplication::UnicodeUTF8));
-        actionCreateUnit->setText(QApplication::translate("MainWindow", "Unit map...", 0, QApplication::UnicodeUTF8));
+        actionEditRedo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+Z", 0));
+        actionCreateUnit->setText(QApplication::translate("MainWindow", "Unit map...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionCreateUnit->setToolTip(QApplication::translate("MainWindow", "Create a new \"Unit Map\"", 0, QApplication::UnicodeUTF8));
+        actionCreateUnit->setToolTip(QApplication::translate("MainWindow", "Create a new \"Unit Map\"", 0));
 #endif // QT_NO_TOOLTIP
-        actionCreateUnit->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0, QApplication::UnicodeUTF8));
-        actionCreateFromPatterns->setText(QApplication::translate("MainWindow", "From patterns...", 0, QApplication::UnicodeUTF8));
+        actionCreateUnit->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0));
+        actionCreateFromPatterns->setText(QApplication::translate("MainWindow", "From patterns...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionCreateFromPatterns->setToolTip(QApplication::translate("MainWindow", "Create a map from a series of captured patters", 0, QApplication::UnicodeUTF8));
+        actionCreateFromPatterns->setToolTip(QApplication::translate("MainWindow", "Create a map from a series of captured patters", 0));
 #endif // QT_NO_TOOLTIP
-        actionCreateFromPatterns->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+O", 0, QApplication::UnicodeUTF8));
-        actionCreateFromModel->setText(QApplication::translate("MainWindow", "From 3d model...", 0, QApplication::UnicodeUTF8));
+        actionCreateFromPatterns->setShortcut(QApplication::translate("MainWindow", "Ctrl+Shift+O", 0));
+        actionCreateFromModel->setText(QApplication::translate("MainWindow", "From 3d model...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionCreateFromModel->setToolTip(QApplication::translate("MainWindow", "Create a map from a 3d model and camera/projector positions", 0, QApplication::UnicodeUTF8));
+        actionCreateFromModel->setToolTip(QApplication::translate("MainWindow", "Create a map from a 3d model and camera/projector positions", 0));
 #endif // QT_NO_TOOLTIP
-        actionCreateInverse->setText(QApplication::translate("MainWindow", "Inverse from current", 0, QApplication::UnicodeUTF8));
+        actionCreateInverse->setText(QApplication::translate("MainWindow", "Inverse from current", 0));
 #ifndef QT_NO_TOOLTIP
-        actionCreateInverse->setToolTip(QApplication::translate("MainWindow", "Create a inverse map from the currently open map", 0, QApplication::UnicodeUTF8));
+        actionCreateInverse->setToolTip(QApplication::translate("MainWindow", "Create a inverse map from the currently open map", 0));
 #endif // QT_NO_TOOLTIP
-        actionCreateInverse->setShortcut(QApplication::translate("MainWindow", "Ctrl+I", 0, QApplication::UnicodeUTF8));
-        actionFullscreen->setText(QApplication::translate("MainWindow", "Full Screen", 0, QApplication::UnicodeUTF8));
+        actionCreateInverse->setShortcut(QApplication::translate("MainWindow", "Ctrl+I", 0));
+        actionFullscreen->setText(QApplication::translate("MainWindow", "Full Screen", 0));
 #ifndef QT_NO_TOOLTIP
-        actionFullscreen->setToolTip(QApplication::translate("MainWindow", "Toggle Full Screen mode", 0, QApplication::UnicodeUTF8));
+        actionFullscreen->setToolTip(QApplication::translate("MainWindow", "Toggle Full Screen mode", 0));
 #endif // QT_NO_TOOLTIP
-        actionFullscreen->setShortcut(QApplication::translate("MainWindow", "Ctrl+F", 0, QApplication::UnicodeUTF8));
-        actionZoomIn->setText(QApplication::translate("MainWindow", "Zoom In", 0, QApplication::UnicodeUTF8));
-        actionZoomIn->setShortcut(QApplication::translate("MainWindow", "Ctrl+=", 0, QApplication::UnicodeUTF8));
-        actionZoomOut->setText(QApplication::translate("MainWindow", "Zoom Out", 0, QApplication::UnicodeUTF8));
-        actionZoomOut->setShortcut(QApplication::translate("MainWindow", "Ctrl+-", 0, QApplication::UnicodeUTF8));
-        actionZoomActualSize->setText(QApplication::translate("MainWindow", "Actual Size", 0, QApplication::UnicodeUTF8));
+        actionFullscreen->setShortcut(QApplication::translate("MainWindow", "Ctrl+F", 0));
+        actionZoomIn->setText(QApplication::translate("MainWindow", "Zoom In", 0));
+        actionZoomIn->setShortcut(QApplication::translate("MainWindow", "Ctrl+=", 0));
+        actionZoomOut->setText(QApplication::translate("MainWindow", "Zoom Out", 0));
+        actionZoomOut->setShortcut(QApplication::translate("MainWindow", "Ctrl+-", 0));
+        actionZoomActualSize->setText(QApplication::translate("MainWindow", "Actual Size", 0));
 #ifndef QT_NO_TOOLTIP
-        actionZoomActualSize->setToolTip(QApplication::translate("MainWindow", "Show the current map at 100%", 0, QApplication::UnicodeUTF8));
+        actionZoomActualSize->setToolTip(QApplication::translate("MainWindow", "Show the current map at 100%", 0));
 #endif // QT_NO_TOOLTIP
-        actionZoomActualSize->setShortcut(QApplication::translate("MainWindow", "Ctrl+1", 0, QApplication::UnicodeUTF8));
-        actionZoomFit->setText(QApplication::translate("MainWindow", "Fit to window", 0, QApplication::UnicodeUTF8));
+        actionZoomActualSize->setShortcut(QApplication::translate("MainWindow", "Ctrl+1", 0));
+        actionZoomFit->setText(QApplication::translate("MainWindow", "Fit to window", 0));
 #ifndef QT_NO_TOOLTIP
-        actionZoomFit->setToolTip(QApplication::translate("MainWindow", "Fit the current map to the window size", 0, QApplication::UnicodeUTF8));
+        actionZoomFit->setToolTip(QApplication::translate("MainWindow", "Fit the current map to the window size", 0));
 #endif // QT_NO_TOOLTIP
-        actionZoomFit->setShortcut(QApplication::translate("MainWindow", "Ctrl+0", 0, QApplication::UnicodeUTF8));
-        actionDisplayUV->setText(QApplication::translate("MainWindow", "UV gradient", 0, QApplication::UnicodeUTF8));
+        actionZoomFit->setShortcut(QApplication::translate("MainWindow", "Ctrl+0", 0));
+        actionDisplayUV->setText(QApplication::translate("MainWindow", "UV gradient", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayUV->setToolTip(QApplication::translate("MainWindow", "Show the native UV gradient of the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayUV->setToolTip(QApplication::translate("MainWindow", "Show the native UV gradient of the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionDisplayU->setText(QApplication::translate("MainWindow", "U gradient", 0, QApplication::UnicodeUTF8));
+        actionDisplayU->setText(QApplication::translate("MainWindow", "U gradient", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayU->setToolTip(QApplication::translate("MainWindow", "Show only the U gradient of the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayU->setToolTip(QApplication::translate("MainWindow", "Show only the U gradient of the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionDisplayV->setText(QApplication::translate("MainWindow", "V gradient", 0, QApplication::UnicodeUTF8));
+        actionDisplayV->setText(QApplication::translate("MainWindow", "V gradient", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayV->setToolTip(QApplication::translate("MainWindow", "Show only the V gradient of the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayV->setToolTip(QApplication::translate("MainWindow", "Show only the V gradient of the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionDisplayAlpha->setText(QApplication::translate("MainWindow", "Alpha channel", 0, QApplication::UnicodeUTF8));
+        actionDisplayAlpha->setText(QApplication::translate("MainWindow", "Alpha channel", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayAlpha->setToolTip(QApplication::translate("MainWindow", "Show the alpha channel of the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayAlpha->setToolTip(QApplication::translate("MainWindow", "Show the alpha channel of the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionDisplayGrid->setText(QApplication::translate("MainWindow", "Grid", 0, QApplication::UnicodeUTF8));
+        actionDisplayGrid->setText(QApplication::translate("MainWindow", "Grid", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayGrid->setToolTip(QApplication::translate("MainWindow", "Transform a grid image with the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayGrid->setToolTip(QApplication::translate("MainWindow", "Transform a grid image with the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionDisplayFile->setText(QApplication::translate("MainWindow", "File...", 0, QApplication::UnicodeUTF8));
+        actionDisplayFile->setText(QApplication::translate("MainWindow", "File...", 0));
 #ifndef QT_NO_TOOLTIP
-        actionDisplayFile->setToolTip(QApplication::translate("MainWindow", "Open an image or movie and transform it with the current map", 0, QApplication::UnicodeUTF8));
+        actionDisplayFile->setToolTip(QApplication::translate("MainWindow", "Open an image or movie and transform it with the current map", 0));
 #endif // QT_NO_TOOLTIP
-        actionFilterMedian->setText(QApplication::translate("MainWindow", "Median...", 0, QApplication::UnicodeUTF8));
-        actionFilterGaussian->setText(QApplication::translate("MainWindow", "Gaussian...", 0, QApplication::UnicodeUTF8));
-        actionFilterDespeckle->setText(QApplication::translate("MainWindow", "Despeckle...", 0, QApplication::UnicodeUTF8));
-        actionFilterHoles->setText(QApplication::translate("MainWindow", "Fill holes...", 0, QApplication::UnicodeUTF8));
-        actionGridNone->setText(QApplication::translate("MainWindow", "Black", 0, QApplication::UnicodeUTF8));
+        actionFilterMedian->setText(QApplication::translate("MainWindow", "Median...", 0));
+        actionFilterGaussian->setText(QApplication::translate("MainWindow", "Gaussian...", 0));
+        actionFilterDespeckle->setText(QApplication::translate("MainWindow", "Despeckle...", 0));
+        actionFilterHoles->setText(QApplication::translate("MainWindow", "Fill holes...", 0));
+        actionGridNone->setText(QApplication::translate("MainWindow", "Black", 0));
 #ifndef QT_NO_TOOLTIP
-        actionGridNone->setToolTip(QApplication::translate("MainWindow", "Render against a black background", 0, QApplication::UnicodeUTF8));
+        actionGridNone->setToolTip(QApplication::translate("MainWindow", "Render against a black background", 0));
 #endif // QT_NO_TOOLTIP
-        actionGridLight->setText(QApplication::translate("MainWindow", "Light grid", 0, QApplication::UnicodeUTF8));
+        actionGridLight->setText(QApplication::translate("MainWindow", "Light grid", 0));
 #ifndef QT_NO_TOOLTIP
-        actionGridLight->setToolTip(QApplication::translate("MainWindow", "Render against a light grid", 0, QApplication::UnicodeUTF8));
+        actionGridLight->setToolTip(QApplication::translate("MainWindow", "Render against a light grid", 0));
 #endif // QT_NO_TOOLTIP
-        actionGridDark->setText(QApplication::translate("MainWindow", "Dark grid", 0, QApplication::UnicodeUTF8));
+        actionGridDark->setText(QApplication::translate("MainWindow", "Dark grid", 0));
 #ifndef QT_NO_TOOLTIP
-        actionGridDark->setToolTip(QApplication::translate("MainWindow", "Render against a dark grid", 0, QApplication::UnicodeUTF8));
+        actionGridDark->setToolTip(QApplication::translate("MainWindow", "Render against a dark grid", 0));
 #endif // QT_NO_TOOLTIP
-        actionShowTransparency->setText(QApplication::translate("MainWindow", "Transparency", 0, QApplication::UnicodeUTF8));
+        actionShowTransparency->setText(QApplication::translate("MainWindow", "Transparency", 0));
 #ifndef QT_NO_TOOLTIP
-        actionShowTransparency->setToolTip(QApplication::translate("MainWindow", "Toggle rendering with or without transparency", 0, QApplication::UnicodeUTF8));
+        actionShowTransparency->setToolTip(QApplication::translate("MainWindow", "Toggle rendering with or without transparency", 0));
 #endif // QT_NO_TOOLTIP
-        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
-        menuEdit->setTitle(QApplication::translate("MainWindow", "Edit", 0, QApplication::UnicodeUTF8));
-        menuFilter->setTitle(QApplication::translate("MainWindow", "Filter", 0, QApplication::UnicodeUTF8));
-        menuView->setTitle(QApplication::translate("MainWindow", "View", 0, QApplication::UnicodeUTF8));
-        menuZoom->setTitle(QApplication::translate("MainWindow", "Zoom", 0, QApplication::UnicodeUTF8));
-        menuBackground->setTitle(QApplication::translate("MainWindow", "Background", 0, QApplication::UnicodeUTF8));
-        menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0, QApplication::UnicodeUTF8));
-        menuCreate->setTitle(QApplication::translate("MainWindow", "Create", 0, QApplication::UnicodeUTF8));
+        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
+        menuEdit->setTitle(QApplication::translate("MainWindow", "Edit", 0));
+        menuFilter->setTitle(QApplication::translate("MainWindow", "Filter", 0));
+        menuView->setTitle(QApplication::translate("MainWindow", "View", 0));
+        menuZoom->setTitle(QApplication::translate("MainWindow", "Zoom", 0));
+        menuBackground->setTitle(QApplication::translate("MainWindow", "Background", 0));
+        menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0));
+        menuCreate->setTitle(QApplication::translate("MainWindow", "Create", 0));
     } // retranslateUi
 
 };

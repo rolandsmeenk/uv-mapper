@@ -11,15 +11,15 @@
 #define UI_UNITMAPDIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QComboBox>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QHeaderView>
+#include <QLabel>
+#include <QLineEdit>
 
 QT_BEGIN_NAMESPACE
 
@@ -84,24 +84,24 @@ public:
 
     void retranslateUi(QDialog *UnitmapDialog)
     {
-        UnitmapDialog->setWindowTitle(QApplication::translate("UnitmapDialog", "Create unit-map", 0, QApplication::UnicodeUTF8));
+        UnitmapDialog->setWindowTitle(QApplication::translate("UnitmapDialog", "Create unit-map", 0));
         lineEditWidth->setInputMask(QString());
         lineEditHeight->setInputMask(QString());
-        labelPresets->setText(QApplication::translate("UnitmapDialog", "Preset:", 0, QApplication::UnicodeUTF8));
-        labelWidth->setText(QApplication::translate("UnitmapDialog", "Width:", 0, QApplication::UnicodeUTF8));
-        labelHeight->setText(QApplication::translate("UnitmapDialog", "Height:", 0, QApplication::UnicodeUTF8));
+        labelPresets->setText(QApplication::translate("UnitmapDialog", "Preset:", 0));
+        labelWidth->setText(QApplication::translate("UnitmapDialog", "Width:", 0));
+        labelHeight->setText(QApplication::translate("UnitmapDialog", "Height:", 0));
         comboPresets->clear();
         comboPresets->insertItems(0, QStringList()
-         << QApplication::translate("UnitmapDialog", "Current screen resolution", "auto", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "SGA (800 x 600)", "800x600", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "XGA (1024 x 768)", "1024x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "WXGA (1280 x 800)", "1280x800", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "720p (1280 x 720)", "1280x720", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "1080p (1920 x 1080)", "1920x1080", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "Dual XGA (2048 x 768)", "2048x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "Triple XGA (3072 x 768)", "3072x768", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "Dual WXGA (2560 x 800)", "2560x800", QApplication::UnicodeUTF8)
-         << QApplication::translate("UnitmapDialog", "Triple WXGA (3840 x 800)", "3840x800", QApplication::UnicodeUTF8)
+         << QApplication::translate("UnitmapDialog", "Current screen resolution", "auto")
+         << QApplication::translate("UnitmapDialog", "SGA (800 x 600)", "800x600")
+         << QApplication::translate("UnitmapDialog", "XGA (1024 x 768)", "1024x768")
+         << QApplication::translate("UnitmapDialog", "WXGA (1280 x 800)", "1280x800")
+         << QApplication::translate("UnitmapDialog", "720p (1280 x 720)", "1280x720")
+         << QApplication::translate("UnitmapDialog", "1080p (1920 x 1080)", "1920x1080")
+         << QApplication::translate("UnitmapDialog", "Dual XGA (2048 x 768)", "2048x768")
+         << QApplication::translate("UnitmapDialog", "Triple XGA (3072 x 768)", "3072x768")
+         << QApplication::translate("UnitmapDialog", "Dual WXGA (2560 x 800)", "2560x800")
+         << QApplication::translate("UnitmapDialog", "Triple WXGA (3840 x 800)", "3840x800")
         );
     } // retranslateUi
 

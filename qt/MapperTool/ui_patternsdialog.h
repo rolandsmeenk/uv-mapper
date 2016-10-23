@@ -10,22 +10,22 @@
 #ifndef UI_PATTERNSDIALOG_H
 #define UI_PATTERNSDIALOG_H
 
-#include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QFormLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QListWidget>
-#include <QtGui/QProgressBar>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QSpinBox>
-#include <QtGui/QVBoxLayout>
+#include <QVariant>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QComboBox>
+#include <QDialog>
+#include <QFormLayout>
+#include <QHBoxLayout>
+#include <QHeaderView>
+#include <QLabel>
+#include <QListWidget>
+#include <QProgressBar>
+#include <QPushButton>
+#include <QSpacerItem>
+#include <QSpinBox>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
@@ -179,30 +179,30 @@ public:
 
     void retranslateUi(QDialog *PatternsDialog)
     {
-        PatternsDialog->setWindowTitle(QApplication::translate("PatternsDialog", "Create uv map from patterns", 0, QApplication::UnicodeUTF8));
+        PatternsDialog->setWindowTitle(QApplication::translate("PatternsDialog", "Create uv map from patterns", 0));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
         QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("PatternsDialog", "<no patterns loaded>", 0, QApplication::UnicodeUTF8));
+        ___qlistwidgetitem->setText(QApplication::translate("PatternsDialog", "<no patterns loaded>", 0));
         listWidget->setSortingEnabled(__sortingEnabled);
 
-        selectPatternsButton->setText(QApplication::translate("PatternsDialog", "Load patterns...", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("PatternsDialog", "Options:", 0, QApplication::UnicodeUTF8));
-        depthList->setSuffix(QApplication::translate("PatternsDialog", " bits", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("PatternsDialog", "Depth", 0, QApplication::UnicodeUTF8));
+        selectPatternsButton->setText(QApplication::translate("PatternsDialog", "Load patterns...", 0));
+        label->setText(QApplication::translate("PatternsDialog", "Options:", 0));
+        depthList->setSuffix(QApplication::translate("PatternsDialog", " bits", 0));
+        label_2->setText(QApplication::translate("PatternsDialog", "Depth", 0));
         channelList->clear();
         channelList->insertItems(0, QStringList()
-         << QApplication::translate("PatternsDialog", "Red", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("PatternsDialog", "Green", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("PatternsDialog", "Blue", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("PatternsDialog", "Combined", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("PatternsDialog", "Red", 0)
+         << QApplication::translate("PatternsDialog", "Green", 0)
+         << QApplication::translate("PatternsDialog", "Blue", 0)
+         << QApplication::translate("PatternsDialog", "Combined", 0)
         );
-        label_3->setText(QApplication::translate("PatternsDialog", "Channel", 0, QApplication::UnicodeUTF8));
-        extractLightButton->setText(QApplication::translate("PatternsDialog", "Extract lightest image", 0, QApplication::UnicodeUTF8));
-        extractDarkButton->setText(QApplication::translate("PatternsDialog", "Extract darkest image", 0, QApplication::UnicodeUTF8));
-        acceptButton->setText(QApplication::translate("PatternsDialog", "Make UV Map", 0, QApplication::UnicodeUTF8));
-        rejectButton->setText(QApplication::translate("PatternsDialog", "Cancel", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("PatternsDialog", "Channel", 0));
+        extractLightButton->setText(QApplication::translate("PatternsDialog", "Extract lightest image", 0));
+        extractDarkButton->setText(QApplication::translate("PatternsDialog", "Extract darkest image", 0));
+        acceptButton->setText(QApplication::translate("PatternsDialog", "Make UV Map", 0));
+        rejectButton->setText(QApplication::translate("PatternsDialog", "Cancel", 0));
     } // retranslateUi
 
 };
